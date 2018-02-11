@@ -1,3 +1,7 @@
+/**
+ * @flow
+ */
+
 import initialState from "../selectors/router";
 import { AppNavigator } from "../../components/App";
 

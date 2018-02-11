@@ -4,6 +4,9 @@
 
 import React, { Component } from "react";
 import { Provider } from "react-redux";
+/**
+ * @flow
+ */
 
 import configureStore from "./store/configureStore";
 import AppWithNavigationState from "./components/App";
