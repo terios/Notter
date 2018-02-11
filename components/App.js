@@ -1,9 +1,11 @@
 /*
 * @flow
 */
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { BackHandler } from "react-native";
+
+import type { Dispatch as ReduxDispatch } from "redux";
 
 import {
   StackNavigator,
@@ -15,12 +17,16 @@ import { createReduxBoundAddListener } from "react-navigation-redux-helpers";
 
 import routesConfig from "./Routes";
 
-export const AppNavigator = StackNavigator(
+export const AppNavigator: any = StackNavigator(
   routesConfig.routes,
   routesConfig.options
 );
 
-class App extends React.Component {
+type Props = {
+  dispatch: ReduxDispatch,
+  nav: any
+};
+class App extends Component<Props> {
   componentDidMount() {
     BackHandler.addEventListener("hardwareBackPress", this.onBackPress);
   }

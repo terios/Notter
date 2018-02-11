@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import { Platform, StatusBar, StyleSheet, View, Text } from "react-native";
 
+import { TRANSPARENT } from "../constants";
 const styles = StyleSheet.create({
   statusBar: {
-    backgroundColor: "transparent",
+    backgroundColor: TRANSPARENT,
     height: Platform.OS === "ios" ? 20 : 0
-  },
-  gradient: {
-    height: "100%"
   }
 });
 

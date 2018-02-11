@@ -4,21 +4,23 @@
  * @flow
  */
 
-import React, { Component } from 'react'
-import { Provider } from 'react-redux'
-import configureStore from './store/configureStore'
-import AppWithNavigationState from './components/App'
+import React, { Component } from "react";
+import { Provider } from "react-redux";
+import configureStore from "./store/configureStore";
+import AppWithNavigationState from "./components/App";
 
-const store = configureStore()
+const store = configureStore();
 
-class RootApp extends Component {
-  render () {
+type Props = {};
+
+class RootApp extends Component<Props> {
+  render() {
     return (
       <Provider store={store}>
         <AppWithNavigationState />
       </Provider>
-    )
+    );
   }
 }
 
-export default RootApp
+export default RootApp;

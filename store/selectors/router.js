@@ -2,7 +2,7 @@
  * @flow
  */
 
-const initialState = AppNavigator =>
+const initialState = (AppNavigator: any) =>
   AppNavigator.router.getStateForAction(
     AppNavigator.router.getActionForPathAndParams("Main")
   );
