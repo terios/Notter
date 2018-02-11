@@ -9,7 +9,8 @@ const AppNavigatorConfig = {
     }
   },
   options: {
-    initialRouteName: "Main"
+    initialRouteName: "Main",
+    headerMode: "none"
   }
 };
 
