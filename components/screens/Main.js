@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { View, Text } from "react-native";
-
-// import { Button } from "react-native-elements";
+import { Button } from "react-native-elements";
 
 class MainPage extends Component {
   onChooseColor() {}
@@ -10,7 +9,9 @@ class MainPage extends Component {
     const styles = { flex: 1, alignSelf: "stretch" };
     return (
       <View style={styles}>
-        <Text>ookokokokokokok</Text>
+        <Text>anas</Text>
+
+        <Button text="BUTTON" />
       </View>
     );
   }
