@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Platform, StatusBar, StyleSheet, View, Text } from "react-native";
 
-import { TRANSPARENT } from "../constants";
+import { TRANSPARENT } from "../../config/constants";
 const styles = StyleSheet.create({
   statusBar: {
     backgroundColor: TRANSPARENT,

@@ -6,18 +6,24 @@ import { connect } from "react-redux";
 import { BackHandler } from "react-native";
 
 import type { Dispatch as ReduxDispatch } from "redux";
+import type { NavigationProp } from "react-navigation";
 
 import {
   StackNavigator,
+  TabNavigator,
   addNavigationHelpers,
   NavigationActions
 } from "react-navigation";
 
 import { createReduxBoundAddListener } from "react-navigation-redux-helpers";
 
-import routesConfig from "./Routes";
+import routesConfig from "../Routes";
 
-export const AppNavigator: any = StackNavigator(
+/*export const AppNavigator: any = StackNavigator(
+  routesConfig.routes,
+  routesConfig.options
+);*/
+export const AppNavigator: any = TabNavigator(
   routesConfig.routes,
   routesConfig.options
 );
@@ -44,7 +50,7 @@ class App extends Component<Props> {
 
   render() {
     const { dispatch, nav } = this.props;
-    const navigation = addNavigationHelpers({
+    const navigation: NavigationProp = addNavigationHelpers({
       dispatch: this.props.dispatch,
       state: this.props.nav,
       addListener: createReduxBoundAddListener("root")
